@@ -2,6 +2,8 @@
 
 VowelAudio é um projeto web que utiliza a API Web Speech para sintetizar a pronúncia de vogais em português. O objetivo é criar uma interface interativa onde os usuários podem clicar em botões para ouvir a pronúncia de cada vogal.
 
+![Vogais](vogais.png)
+
 ## Tecnologias Utilizadas
 
 - HTML
