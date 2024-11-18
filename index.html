@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vogais Sonoras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            width: 80px; /* Ajustado para ser mais responsivo */
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Efeito de hover */
+        }
+
+        button {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                width: 60px; /* Ajuste para telas menores */
+            }
+
+            button {
+                font-size: 20px; /* Reduz o tamanho da fonte em telas pequenas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <button onclick="playSound('A')">A</button>
+        </div>
+        <div class="card">
+            <button onclick="playSound('E')">E</button>
+        </div>
+        <div class="card">
+            <button onclick="playSound('I')">I</button>
+        </div>
+        <div class="card">
+            <button onclick="playSound('O')">O</button>
+        </div>
+        <div class="card">
+            <button onclick="playSound('U')">U</button>
+        </div>
+    </div>
+
+    <script>
+        // Função para tocar o som da vogal usando a síntese de voz
+        function playSound(letter) {
+            const utterance = new SpeechSynthesisUtterance(letter);
+            utterance.lang = 'pt-BR'; // Define o idioma como português
+            speechSynthesis.speak(utterance);
+        }
+    </script>
+</body>
+</html>
